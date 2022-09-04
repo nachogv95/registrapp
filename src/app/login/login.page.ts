@@ -4,11 +4,11 @@ import { ToastController } from '@ionic/angular';
 
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.page.html',
-  styleUrls: ['./home.page.scss'],
+  selector: 'app-login',
+  templateUrl: './login.page.html',
+  styleUrls: ['./login.page.scss'],
 })
-export class HomePage implements OnInit {
+export class LoginPage implements OnInit {
   /**
    * Se genera el modelo user con dos claves
    * cada clave tiene su valor inicial
