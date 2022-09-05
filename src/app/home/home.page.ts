@@ -32,7 +32,7 @@ export class HomePage implements OnInit {
           user: this.user // Al estado se asignamos un objeto con clave y valor
         }
       };
-      this.router.navigate(['/home'], navigationExtras); // navegamos hacia el Home y enviamos información adicional
+      this.router.navigate(['/inicio'], navigationExtras); // navegamos hacia el Home y enviamos información adicional
     }else{
       this.presentToast("Falta ingresar: "+this.field, 4500);
     }
