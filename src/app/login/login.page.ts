@@ -22,6 +22,7 @@ export class LoginPage implements OnInit {
 
   ngOnInit() {
   }
+  
   ingresar() {
     //verifico campos vacíos
     if (this.validateModel(this.user)) {

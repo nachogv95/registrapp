@@ -1,27 +1,69 @@
+ <ion-header>
 
-<ion-content padding class="background">
-  
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+ </ion-header>
 
-      <ion-item lines="full">
-        <ion-label position="stacked">Usuario</ion-label>
-        <!-- Usamos ngModel para indicarle al input el objeto a utilizar-->
-        <ion-input type="text" minlength="3" maxlength="8" [(ngModel)]="user.usuario"></ion-input>
-      </ion-item>
-      <ion-item lines="full">
-        <!-- Usamos ngModel para indicarle al input el objeto a utilizar-->
-        <ion-label position="stacked">Password</ion-label>
-        <ion-input type="password" minlength="4" maxlength="4" [(ngModel)]="user.password"></ion-input>
-      </ion-item>
-      <ion-row>
-        <ion-col>
-          <!-- Indicamos mediante el (click) la funcion a quien referenciara-->
-          <ion-button expand="full" (click)="ingresar()">Ingresar</ion-button>
-        </ion-col>
-      </ion-row>
+  <ion-content >
+
+<div id="barrasuperior"></div>
+
+<div id="barrainferior"></div>
 
 
+   
+      <div id="logoduoc">
+        <img src="../../assets/images/logoduoc.png" alt="">
+      </div>
 
-</ion-content>
+      <div id="acreditacionduoc">
+        <img src="../../assets/images/imagenpata.png" alt="">
+      </div>
+
+      <div id="codigoqr">
+        <img src="../../assets/images/codigoqr.png" alt="">
+      </div>
+
+      <div id="restablecer">
+        <a href="src\app\restablecer\restablecer.page.html">Olvidé mi contraseña</a>
+      </div>
+
+      <ion-title id="nombreapp">Registrapp</ion-title>
 
 
+      <ion-card id="login">
+
+        <ion-card-content>
+
+          <ion-item lines="full">
+
+            <ion-label position="stacked">Usuario</ion-label>
+
+            <!-- Usamos ngModel para indicarle al input el objeto a utilizar-->
+            <ion-input type="text" minlength="3" maxlength="8" [(ngModel)]="user.usuario"></ion-input>
+
+          </ion-item>
+
+          <ion-item lines="full">
+
+            <!-- Usamos ngModel para indicarle al input el objeto a utilizar-->
+            <ion-label position="stacked">Contraseña</ion-label>
+
+            <ion-input type="password" minlength="4" maxlength="4" [(ngModel)]="user.password"></ion-input>
+
+          </ion-item>
+
+          <ion-item>
+
+            <ion-col>
+
+              <!-- Indicamos mediante el (click) la funcion a quien referenciara-->
+              <ion-button style="--background:#F8B31C;" expand="full" (click)="ingresar()">INGRESAR</ion-button>
+
+           </ion-col>
+
+          </ion-item>
+
+        </ion-card-content>
+
+      </ion-card>
+
+</ion-content> 
