@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-
+import { RecaptchaModule } from "ng-recaptcha";
 import { IonicModule } from '@ionic/angular';
 
 import { RestablecerPageRoutingModule } from './restablecer-routing.module';
@@ -13,7 +13,8 @@ import { RestablecerPage } from './restablecer.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    RestablecerPageRoutingModule
+    RestablecerPageRoutingModule,
+    RecaptchaModule
   ],
   declarations: [RestablecerPage]
 })
