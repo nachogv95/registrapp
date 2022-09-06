@@ -1,21 +1,41 @@
 <ion-header>
 
-  
+
 </ion-header>
 
 <ion-content>
 
   <div id="barrasuperior"></div>
-  <br><br><br><br><br><br><br>
-  <div style="
-
-    transform:scale(0.91);
-    transform-origin:0 0;">
+  <p id="mensaje">{{ message }}</p>
+  <div id="captcha">
     <re-captcha (resolved)="captchaResolved($event)" [siteKey]="siteKey"></re-captcha>
   </div>
-  
+
   <div id="barrainferior"></div>
+  <ion-button style="visibility: hidden" id="open-modal" expand="block">Restablecer contraseña</ion-button>
   
-  <h1>Is captcha valid? {{ isCaptchaValid | json }}</h1>
+  <ion-modal trigger="open-modal" (willDismiss)="onWillDismiss($event)">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-buttons slot="start">
+            <ion-button (click)="cancel()">Cancelar</ion-button>
+          </ion-buttons>
+          <ion-title></ion-title>
+          <ion-buttons slot="end">
+            <ion-button [routerLink]="['/home']"(click)="confirm()" [strong]="true">Confirmar</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+        <ion-item>
+          <ion-label position="stacked">Ingresa tu e-mail</ion-label>
+          <ion-input type="e-mail" placeholder="choclo@duocuc.cl" [(ngModel)]="name"></ion-input>
+        </ion-item>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+  
+  
 
 </ion-content>
