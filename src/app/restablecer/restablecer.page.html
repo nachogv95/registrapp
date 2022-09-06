@@ -6,7 +6,16 @@
 <ion-content>
 
   <div id="barrasuperior"></div>
+  <br><br><br><br><br><br><br>
+  <div style="
 
+    transform:scale(0.91);
+    transform-origin:0 0;">
+    <re-captcha (resolved)="captchaResolved($event)" [siteKey]="siteKey"></re-captcha>
+  </div>
+  
   <div id="barrainferior"></div>
+  
+  <h1>Is captcha valid? {{ isCaptchaValid | json }}</h1>
 
 </ion-content>
